@@ -1,0 +1,25 @@
+#content {
+    display: inline-block;
+    width: 100%;
+    height: calc(90vh - 2px);
+}
+
+#topic-list {
+    width: 100%;
+    min-height: 10vh;
+    border-bottom: 2px solid #cccccc;
+}
+
+#toolbar {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    border-left: 2px solid #cccccc;
+}
+
+#gif-dump {
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+}
