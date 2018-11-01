@@ -5,21 +5,31 @@
 }
 
 #topic-list {
-    width: 100%;
+    width: calc(100% - 2em);
     min-height: 10vh;
     border-bottom: 2px solid #cccccc;
+    padding: 1em;
 }
 
 #toolbar {
-    display: inline-block;
+    padding: 1em;
+    float: right;
     width: 20%;
+    max-width: 200px;
     height: 100%;
     border-left: 2px solid #cccccc;
 }
 
+#new-search {
+    width:100%;
+}
+
 #gif-dump {
-    width: 70%;
+    width: calc(100% - (202px + 2em));
     height: 100%;
-    display: inline-block;
     float: left;
+}
+
+.gif-div {
+    display: inline;
 }
