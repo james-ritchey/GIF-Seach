@@ -1,8 +1,8 @@
 #content {
     display: inline-block;
     width: 100%;
-    height: calc(90vh - 2px);
-}
+    min-height: calc(90vh - (2em + 2px));
+} 
 
 #topic-list {
     width: calc(100% - 2em);
@@ -16,7 +16,7 @@
     float: right;
     width: 20%;
     max-width: 200px;
-    height: 100%;
+    height: calc(100% - (2em));
     border-left: 2px solid #cccccc;
 }
 
@@ -25,11 +25,17 @@
 }
 
 #gif-dump {
-    width: calc(100% - (202px + 2em));
-    height: 100%;
+    width: calc(100% - (202px + 4em));
+    height: calc(100% - (2em));
     float: left;
+    padding: 1em;
+    overflow: auto;
 }
 
 .gif-div {
     display: inline;
+}
+
+.container {
+    height: 95vh;
 }
