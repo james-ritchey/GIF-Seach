@@ -1,35 +1,49 @@
+.container {
+    height: 100vh;
+    overflow: hidden;
+}
+
 #content {
     display: inline-block;
     width: 100%;
-    height: calc(90vh - 2px);
+    height: calc(90vh - (2em));
 }
 
 #topic-list {
     width: calc(100% - 2em);
     min-height: 10vh;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid #aaaaaa;
     padding: 1em;
 }
 
 #toolbar {
     padding: 1em;
     float: right;
-    width: 20%;
-    max-width: 200px;
-    height: 100%;
-    border-left: 2px solid #cccccc;
+    width: 150px;
+    height: calc(100% - (2em));
+    border-left: 2px solid #aaaaaa;
 }
 
-#new-search {
+.search-params {
     width:100%;
 }
 
 #gif-dump {
-    width: calc(100% - (202px + 2em));
+    width: calc(100% - (152px + 3em));
     height: 100%;
     float: left;
+    overflow: auto;
+    padding: 0.5em;
+    background: #cccccc;
 }
 
 .gif-div {
-    display: inline;
+    width: auto;
+    max-width: 30%;
+    display: inline-block;
+    padding: 0.5em;
+}
+
+.gif-div > img {
+    width: 100%;
 }
