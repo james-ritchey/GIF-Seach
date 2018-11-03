@@ -1,5 +1,9 @@
 $(document).ready(function(){
-    var topics = [];
+    var topics = JSON.parse(localStorage.getItem("topicList"));
+    if(topics === null) {topics = [];}
+    console.log(topics);
+    console.log(topics.length);
+
 
     $("#submit-search").on("click", function(e){
         e.preventDefault();
@@ -13,6 +17,7 @@ $(document).ready(function(){
             $("#topic-list").prepend(newTopic);
             topics.push(topic);
         }
+        localStorage.setItem("topicList", JSON.stringify(topics));
     });
 
     $(document).on("click", ".topic-button", function(){
@@ -36,15 +41,31 @@ $(document).ready(function(){
             for(var i = 0; i < limit; i++) {
                 var newDiv = $("<div>");
                 $(newDiv).addClass("gif-div");
+
+                var gifImgDiv = $("<div>");
+                $(gifImgDiv).addClass("gif-img-div");
+
                 var newGif = $("<img>");
                 $(newGif).attr("src", gifs[i].images.fixed_height_still.url);
                 $(newGif).attr("data-paused", gifs[i].images.fixed_height_still.url);
                 $(newGif).attr("data-play", gifs[i].images.fixed_height.url);
                 $(newGif).addClass("gif-image");
+                $(gifImgDiv).append(newGif)
+
+                var textDiv = $("<div>");
+                $(textDiv).addClass("gif-text-div");
+
                 var rating = $("<p>");
-                $(rating).text(gifs[i].rating);
-                $(newDiv).append(newGif);
-                $(newDiv).append(rating);
+                $(rating).text("Rating: " + gifs[i].rating);
+                $(textDiv).append(rating);
+
+                var favorite = $("<p>");
+                $(favorite).text("Add to favorites");
+                $(textDiv).append(favorite);
+
+
+                $(newDiv).append(gifImgDiv);
+                $(newDiv).append(textDiv);
                 $("#gif-dump").prepend(newDiv);
                 $(button).attr("data-offset", (parseInt($(button).attr("data-offset")) + 1));
             }
@@ -60,4 +81,17 @@ $(document).ready(function(){
     }
     }, ".gif-image");
 
+    function loadList() {
+        for(var i = 0; i < topics.length; i++){
+            var newTopic = $("<button>");
+            var topic = topics[i];
+            $(newTopic).text(topic);
+            $(newTopic).addClass("topic-button");
+            $(newTopic).attr("data-topic", topic);
+            $(newTopic).attr("data-offset", 0);
+            $("#topic-list").prepend(newTopic);
+        }
+    }
+    loadList();
 });
+

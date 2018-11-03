@@ -1,0 +1,41 @@
+#content {
+    display: inline-block;
+    width: 100%;
+    min-height: calc(90vh - (2em + 2px));
+} 
+
+#topic-list {
+    width: calc(100% - 2em);
+    min-height: 10vh;
+    border-bottom: 2px solid #cccccc;
+    padding: 1em;
+}
+
+#toolbar {
+    padding: 1em;
+    float: right;
+    width: 20%;
+    max-width: 200px;
+    height: calc(100% - (2em));
+    border-left: 2px solid #cccccc;
+}
+
+#new-search {
+    width:100%;
+}
+
+#gif-dump {
+    width: calc(100% - (202px + 4em));
+    height: calc(100% - (2em));
+    float: left;
+    padding: 1em;
+    overflow: auto;
+}
+
+.gif-div {
+    display: inline;
+}
+
+.container {
+    height: 95vh;
+}

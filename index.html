@@ -11,8 +11,13 @@
 
     <body>
         <div class="container">
-            <div id="topic-list">
+            <div id="header">
+                <div id="params">
+                    <input type="number" class="search-params" id="limit" placeholder="10">
+                </div>
+                <div id="topic-list">
 
+                </div>
             </div>
             <div id="content">
                 <div id="gif-dump">
@@ -20,8 +25,7 @@
                 </div>
                 <div id="toolbar">
                     <h2>Add a topic:</h2>
-                    <input type="text" class="search-params" id="new-search" placeholder="Search for a GIF...">
-                    <input type="number" class="search-params" id="limit" placeholder="10">
+                    <input type="text" id="new-search" placeholder="Search for a GIF...">
                     <input type="submit" id="submit-search">
                 </div>
             </div>

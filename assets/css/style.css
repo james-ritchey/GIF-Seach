@@ -9,11 +9,22 @@
     height: calc(90vh - (2em));
 }
 
-#topic-list {
-    width: calc(100% - 2em);
+#header {
+    width: calc(100%);
     min-height: 10vh;
     border-bottom: 2px solid #aaaaaa;
-    padding: 1em;
+}
+
+#params {
+    display: inline-block;
+    min-height: 10vh;
+    width: 15%;
+    background: #999999;
+    padding: 0.5em;
+}
+
+#topic-list {
+    display: inline-block;
 }
 
 #toolbar {
@@ -25,7 +36,7 @@
 }
 
 .search-params {
-    width:100%;
+    max-width:30%;
 }
 
 #gif-dump {
@@ -38,12 +49,26 @@
 }
 
 .gif-div {
-    width: auto;
     max-width: 30%;
+    height: 30%;
     display: inline-block;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 2em 0.5em;
+    border: 2px solid #999999;
 }
 
-.gif-div > img {
+.gif-img-div {
     width: 100%;
+    height: 100%;
+}
+
+.gif-img-div > img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.gif-text-div {
+    display: block;
 }
