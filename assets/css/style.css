@@ -1,6 +1,8 @@
 .container {
     height: 100vh;
     overflow: hidden;
+    font-family: 'Fjalla One', cursive;
+
 }
 
 #content {
@@ -12,20 +14,24 @@
 #header {
     width: calc(100%);
     min-height: 10vh;
-    border-bottom: 2px solid #aaaaaa;
+    border-bottom: 2px solid #5fbb9c;
+    background: #8edbc1;
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 #params {
     display: inline-block;
     min-height: 10vh;
     width: 5%;
-    background: #999999;
+    background: #5fbb9c;
     padding: 0.5em;
 }
 
 #topic-div {
     display: inline-block;
     width: 90%;
+    margin-left: 1em;
 }
 
 #toolbar {
@@ -33,7 +39,8 @@
     float: right;
     width: 150px;
     height: calc(100% - (2em));
-    border-left: 2px solid #aaaaaa;
+    border-left: 2px solid #5fbb9c;
+    background: #8edbc1;
 }
 
 .search-params {
@@ -52,15 +59,20 @@
     float: left;
     overflow: auto;
     padding: 1em 2em;
-    background: #cccccc;
+    background: #b4f8e1;
+    background-image: url("../images/tiny-squares.png");
 }
 
 .gif-div {
-    width: calc(25% - (20px));
+    width: calc(25% - (32px));
     height: 30%;
     display: inline-block;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    border: 2px solid #999999;
+    padding: 0.75em;
+    background: #5fbb9c;
+    border-radius: 15px;
+    margin: 0.25em;
+    box-shadow: 4px 4px 10px #529780;
+    color: #ffffff;
 }
 
 .gif-img-div {
@@ -91,4 +103,67 @@
 
 .add-favorite {
     float: right;
+}
+
+button {
+    background: #5fbb9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px #529780;
+    font-family: 'Fjalla One', cursive;
+}
+
+h2 {
+    font-family: 'Pattaya', sans-serif;
+    color: #ffffff;
+    font-size: 180%;
+}
+
+input {
+    background: #C8FCE8;
+    border: none;
+    color: #529780;
+    border: 2px solid #529780;
+    padding: 0.25em;
+    margin-bottom: 0.5em;
+    font-family: 'Fjalla One', cursive;
+    border-radius: 4px;
+    outline: 0;
+}
+
+#submit-search{
+    background: #5fbb9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px #529780;
+    font-family: 'Fjalla One', cursive;
+}
+
+#clear {
+    background: #4f967e;
+}
+
+#clear:hover {
+    background: #55a188;
+}
+
+#submit-search:hover {
+    background: #4f967e;
+}
+
+input::placeholder {
+    color: #63b89c;
+}
+
+button:hover {
+    background: #4f967e;
+}
+
+button:focus {
+    outline: 0;
 }

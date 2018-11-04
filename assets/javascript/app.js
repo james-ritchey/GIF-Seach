@@ -61,7 +61,7 @@ $(document).ready(function(){
                 var favorite = $("<p>");
                 $(favorite).addClass("add-favorite");
                 $(favorite).text("Add to favorites");
-                $(textDiv).append(favorite);
+                //$(textDiv).append(favorite);
 
 
                 $(newDiv).append(gifImgDiv);
@@ -104,10 +104,19 @@ $(document).ready(function(){
 
     $(document).on("click", "#clear", function(){
         if(confirm("Are you sure you want to clear your topic list?")) {
-            topics = [];
+            topics = ["snake", "dog", "science", "tech"];
             $("#topic-list").empty();
+            loadList();
             localStorage.clear();
         }
+    });
+
+    $(document).on("click", ".gif-image", function(){
+        var temp = $("#clipboard");
+        $(temp).val($(this).attr("data-play"));
+        console.log($(temp).val());
+        temp.select();
+        document.execCommand('copy');
     });
 
     loadList();
